@@ -10,7 +10,7 @@ var db4 = require('../database/connect4')
 
 
 router.get('/', function (req, res, next) {
-  res.json("Server is Running")
+  res.json("Server is Runningggg")
 });
 
 /* LOGIN */
@@ -21,7 +21,7 @@ router.post('/login', function (req, res, next) {
     var check = docs.find((un) => {
       return un.username == req.body.username && un.password == req.body.password;
     })
-  
+
 
     if (check != null) {
 
@@ -212,10 +212,10 @@ router.post('/detail/cmt', function (req, res, next) {
 });
 
 router.get('/detail/cmt/:id', function (req, res, next) {
-  db4.find({idProduct:req.params.id}, (err, docs) => {
+  db4.find({ idProduct: req.params.id }, (err, docs) => {
     res.json(docs)
   })
- 
+
 })
 
 router.get('/delete/cmt/:id', function (req, res, next) {
@@ -229,7 +229,7 @@ router.get('/comment', function (req, res, next) {
   db4.find({}, (err, docs) => {
     res.json(docs)
   })
- 
+
 })
 
 
